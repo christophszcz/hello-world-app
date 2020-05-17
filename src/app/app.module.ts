@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -30,7 +31,8 @@ import { TaskComponent } from './dashboard/task/task.component';
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

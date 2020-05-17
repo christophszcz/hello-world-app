@@ -16,6 +16,6 @@
 </mat-toolbar>
 
 <div class="table-task-container">
-  <app-table></app-table>
-  <app-task></app-task>
+  <app-table [inputText]="inputText" [textArea]="textArea"></app-table>
+  <app-task (messageEvent)="receiveInput($event)" (textAreaEvent)="receiveText($event)"></app-task>
 </div>

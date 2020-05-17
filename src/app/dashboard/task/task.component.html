@@ -1,11 +1,13 @@
 <div class="task-container">
   <form class="task-form-container">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="UML Class Diagram" value="">
+      <mat-label></mat-label>
+      <input matInput placeholder="UML Class Diagram" [(ngModel)]="inputValue" name="inputValue">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <textarea matInput placeholder="The service needs doucmentation on the class..."></textarea>
+      <mat-label></mat-label>
+      <textarea matInput placeholder="The service needs doucmentation on the class..." [(ngModel)]="areaValue" (blur)="onBlur()" name="textarea"></textarea>
     </mat-form-field>
 
     <!-- <mat-form-field>

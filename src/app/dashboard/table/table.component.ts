@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
 
 export interface TableData {
   title: string;
@@ -15,13 +15,15 @@ const DEFAULT_TABLE_DATA: TableData[] = [
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnChanges {
   displayedColumns: string[] = ['title', 'details', 'dueDate'];
   dataSource = DEFAULT_TABLE_DATA;
 
-  constructor() { }
+  @Input() input: string;
+  @Input() area: string;
 
-  ngOnInit(): void {
+  ngOnChanges() {
+    this.dataSource.push({ title: this.input, details: this.area, dueDate: undefined });
   }
 
 }

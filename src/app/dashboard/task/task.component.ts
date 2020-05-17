@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.scss']
 })
-export class TaskComponent implements OnInit {
+export class TaskComponent {
 
-  constructor() { }
+  inputValue: string;
+  textValue: string;
 
-  ngOnInit(): void {
+  @Output() messageEvent = new EventEmitter<string>();
+  @Output() textAreaEvent = new EventEmitter<string>();
+
+  onBlur() {
+    this.messageEvent.emit(this.inputValue);
+    this.textAreaEvent.emit(this.textValue);
   }
-
 }

@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
+  inputText: string;
+  textArea: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  receiveInput($event): void {
+    this.inputText = $event;
   }
 
+  receiveText($event): void {
+    this.textArea = $event;
+  }
 }
