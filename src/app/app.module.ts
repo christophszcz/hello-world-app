@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TableComponent } from './dashboard/table/table.component';
+import { TaskComponent } from './dashboard/task/task.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    TableComponent
+    TableComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule,
