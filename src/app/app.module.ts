@@ -1,15 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './dashboard/table/table.component';
 import { TaskComponent } from './dashboard/task/task.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,11 @@ import { TaskComponent } from './dashboard/task/task.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

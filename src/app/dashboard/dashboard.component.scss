@@ -7,4 +7,12 @@
 .table-task-container {
   display: flex;
   margin-top: 20px;
+  justify-content: space-between;
+}
+
+::ng-deep {
+  app-table,
+  app-task {
+    width: 50%;
+  }
 }
